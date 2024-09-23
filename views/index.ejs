@@ -1,0 +1,22 @@
+<%- include("partials/header.ejs") %>
+
+<body>
+    <section class="buttons">
+        <form action="/operation" method="POST">
+            <input type="submit" name="create" id="create-btn" value="Create a Post">
+            <input type="submit" name="delete" id="delete-btn" value="Delete a Post">
+        </form>
+    </section>
+
+    <section class="posts">
+        <div class="container">
+            <h1 class="pst-head">Posts</h1>
+            <%- include("partials/post_list.ejs") %>
+        </div>
+
+    </section>
+
+
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+
+<%let card = 0;%> 
+<%post.forEach(e => {%>
+    <%card++;%>
+    <form action="/blog-view" method="POST" id="blog-view">
+        
+        <div class="card card<%=(card-1)%> <%=e["postTitle"]%>" onClick="document.forms['blog-view'].submit();">
+            <input type="submit" class=" w100" name="blogNo" value="<%=card%>">
+            <h1><%=e["postTitle"]%></h1>
+            <p class=""><%=e["postDesc"]%><span> By. <%=e["author"]%></span></p>    
+        </div>
+    </form>
+
+<%})%>

@@ -1,0 +1,25 @@
+<%-include("partials/header.ejs")%>
+
+<h1>Delete a Post</h1>
+
+<div class="big-container">
+    <div class="checks">
+
+        <form method="POST" action="/post-delete" name="delete-form" id="delete-frm">
+            <%let card=0;%>
+            <%post.forEach(e => {%>
+                <input type="checkbox" name="toDelete" id="delete-check" value="<%=card%>" class="checkbox"><br>
+                <%card++;%>
+            <%});%>
+        </form>
+    </div>
+    <section class="to-del">
+        <%-include("partials/post_list.ejs")%>
+    </section>
+
+</div>
+
+<div class="big-container">
+
+    <input type="submit" name="delete-form" value="Delete Selected" onClick="document.forms['delete-frm'].submit();" class="submit-del post-submit">
+</div>

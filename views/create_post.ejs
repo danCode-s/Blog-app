@@ -1,0 +1,18 @@
+<%- include("partials/header.ejs") %>
+
+<body>
+    <h1>Create Post</h1>
+    <form action="/create-post" method="POST" class="post-form">
+        <label for="post-title">Post Title: </label>
+        <input type="text" name="postTitle" required class="txt">
+        <label for="post-author">Author: </label>
+        <input type="text" name="author" required class="txt">
+        <label for="post-description">Post Description: </label>
+        <input type="text" name="postDesc" required class="txt">
+        
+        <label for="post-content">Post Content: </label>
+        <textarea type="text" name="postContent" rows="6" cols="50" required class="txt"></textarea>
+        <input type="submit" value="Create Post" class="post-submit">
+    </form>
+</body>
+</html>
